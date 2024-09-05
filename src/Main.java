@@ -19,6 +19,7 @@ public class Main {
             System.out.println("3 - Cacarejar");
             System.out.println("4 - Botar ovos");
             System.out.println("5 - Listar ovos");
+            System.out.println("6 - Descubra o Ranking de beleza das galinhas");
             System.out.println("9 - Sair");
 
             controle = System.console().readLine();
@@ -39,14 +40,17 @@ public class Main {
                     System.out.println("4 - Galinha Macho");
                     String tipoGalinha = System.console().readLine();
 
+                    System.out.println("Escreva o nível de beleza da galinha");
+                    Integer nivelDeBeleza = Integer.parseInt(System.console().readLine());
+
                     if (tipoGalinha.equals("1")) {
-                        celeiro.adicionarGalinha(new GalinhaRobusta(nomeGalinha, idadeGalinha));
+                        celeiro.adicionarGalinha(new GalinhaRobusta(nomeGalinha, idadeGalinha, nivelDeBeleza));
                     } else if (tipoGalinha.equals("2")) {
-                        celeiro.adicionarGalinha(new GalinhaShiny(nomeGalinha, idadeGalinha));
+                        celeiro.adicionarGalinha(new GalinhaShiny(nomeGalinha, idadeGalinha, nivelDeBeleza));
                     } else if (tipoGalinha.equals("3")) {
-                        celeiro.adicionarGalinha(new GalinhaDaAngola(nomeGalinha, idadeGalinha));
+                        celeiro.adicionarGalinha(new GalinhaDaAngola(nomeGalinha, idadeGalinha, nivelDeBeleza));
                     } else if (tipoGalinha.equals("4")) {
-                        celeiro.adicionarGalinha(new GalinhaMacho(nomeGalinha, idadeGalinha));
+                        celeiro.adicionarGalinha(new GalinhaMacho(nomeGalinha, idadeGalinha, nivelDeBeleza));
                     } else {
                         System.out.println("Opção inválida");
                     }
@@ -63,6 +67,9 @@ public class Main {
                     break;
                 case "5":
                     celeiro.listarOvos();
+                    break;
+                case "6":
+                    celeiro.rankingBeleza();
                     break;
                 case "9":
                     break;

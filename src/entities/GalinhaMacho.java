@@ -3,8 +3,8 @@ package entities;
 import interfaces.Galo;
 
 public class GalinhaMacho extends Galinha implements Galo {
-    public GalinhaMacho(String nome, int idade) {
-        super(nome, idade);
+    public GalinhaMacho(String nome, int idade, int beleza) {
+        super(nome, idade, beleza);
     }
 
     @Override

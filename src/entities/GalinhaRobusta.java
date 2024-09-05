@@ -1,8 +1,8 @@
 package entities;
 
 public class GalinhaRobusta extends Galinha{
-    public GalinhaRobusta(String nome, int idade) {
-        super(nome, idade);
+    public GalinhaRobusta(String nome, Integer idade, Integer beleza) {
+        super(nome, idade, beleza);
     }
 
     @Override

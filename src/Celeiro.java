@@ -39,4 +39,11 @@ public class Celeiro {
             System.out.println(galinha.getNome() + " botou " + galinha.getOvosPostos() + " ovos do tipo:" + galinha.getClass().getSimpleName());
         }
     }
+
+    public void rankingBeleza(){
+        galinhas.sort((g1, g2) -> g2.getBeleza().compareTo(g1.getBeleza()));
+        for(Galinha galinha : galinhas){
+            System.out.println(galinha.getNome() + " - " + galinha.getBeleza() + " de beleza");
+        }
+    }
 }
