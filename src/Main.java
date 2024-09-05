@@ -3,11 +3,15 @@ import entities.GalinhaMacho;
 import entities.GalinhaRobusta;
 import entities.GalinhaShiny;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
         String controle = "";
         Celeiro celeiro = new Celeiro();
+
+        Scanner scan = new Scanner(System.in);
 
         System.out.printf("Bem vindo ao celeiro\n");
         System.out.printf("Gerencie o celeiro\n");
@@ -22,26 +26,26 @@ public class Main {
             System.out.println("6 - Descubra o Ranking de beleza das galinhas");
             System.out.println("9 - Sair");
 
-            controle = System.console().readLine();
+            controle = scan.nextLine();
 
             switch (controle) {
                 case "1":
 
                     System.out.println("Escreva o nome da galinha");
-                    String nomeGalinha = System.console().readLine();
+                    String nomeGalinha = scan.nextLine();
 
                     System.out.println("Escreva a idade da galinha");
-                    int idadeGalinha = Integer.parseInt(System.console().readLine());
+                    int idadeGalinha = Integer.parseInt(scan.nextLine());
 
                     System.out.println("Escolha o tipo de galinha");
                     System.out.println("1 - Galinha Robusta");
                     System.out.println("2 - Galinha Shiny");
                     System.out.println("3 - Galinha Da Angola");
                     System.out.println("4 - Galinha Macho");
-                    String tipoGalinha = System.console().readLine();
+                    String tipoGalinha = scan.nextLine();
 
                     System.out.println("Escreva o nível de beleza da galinha");
-                    Integer nivelDeBeleza = Integer.parseInt(System.console().readLine());
+                    Integer nivelDeBeleza = Integer.parseInt(scan.nextLine());
 
                     if (tipoGalinha.equals("1")) {
                         celeiro.adicionarGalinha(new GalinhaRobusta(nomeGalinha, idadeGalinha, nivelDeBeleza));
