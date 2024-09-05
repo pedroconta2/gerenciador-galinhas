@@ -1,7 +1,9 @@
+package entities;
+
 public abstract class Galinha {
     private String nome;
     private int idade;
-    private int ovosPostos;
+    protected int ovosPostos;
 
     public Galinha(String nome, int idade) {
         this.nome = nome;
