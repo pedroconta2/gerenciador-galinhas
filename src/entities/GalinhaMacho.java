@@ -19,6 +19,6 @@ public class GalinhaMacho extends Galinha implements Galo {
 
     @Override
     public void cantar() {
-        System.out.println("Cantando como um galo");
+        System.out.println("Cocoricooooooooo (cantando)");
     }
 }
